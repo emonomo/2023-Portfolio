@@ -149,7 +149,7 @@ h1,h2,h3,p{
     /* e_p */
     .e_p{
       /*font-size: 0.875rem;*/
-      font-size: clamp(0.8rem, 4vw,1rem);
+      font-size: clamp(0.75rem, 3vw,1rem);
       line-height: 150%;
       letter-spacing: 0.05rem;
     }
@@ -226,7 +226,7 @@ h1,h2,h3,p{
 
     .topbar .logo{
         font-family: 'Proza Libre', sans-serif;
-        font-size: 1.5rem;
+        font-size: clamp(1.2rem, 2vw, 1.5rem);
         font-weight: 500;
         z-index: 6;
     }
@@ -364,7 +364,25 @@ h1,h2,h3,p{
       .topbar .logo span{
       display: none;
      }
+     .topbar input ~ nav > ul {
+      top: 23%;
+      left: 23%;
     }
+     .topbar input ~ nav > ul > li > a {
+
+      font-size: clamp(2rem, 7vw, 4.5rem);
+      padding: 20px;
+     }
+     .topbar input + label {
+      width: 50px;
+     }
+    .topbar input:checked ~label span:nth-last-child(3) {
+      transform: rotate(23deg) translate(1px, 0px);
+     }
+    .topbar input:checked ~label span {
+      transform: rotate(-23deg) translate(3px, -8px);
+     }
+   }
 /* --------------1.index---------------- */  
     #index{
       display: flex;
@@ -753,13 +771,15 @@ h1,h2,h3,p{
     }
     .eyebox-l {
       width: 42px;
-      height: 50px;
-      left: 32%;
+      height: 52px;
+      left: 34%;
+      top: 27%;
     }
     .eyebox-r {
       width: 42px;
-      height: 50px;
-      left: 52%;
+      height: 52px;
+      left: 51%;
+      top: 27%;
     }
     .eye::after {
       width: 20px;
@@ -779,7 +799,7 @@ h1,h2,h3,p{
       height: 50px;
       width: 135px;
     }
-    #below_bow .e_h2 {
+    .e_h2 {
       font-size: clamp(1.15rem, 3vw,2.2rem);
       line-height: clamp(1.15rem, 3vw,2.2rem);
     }
@@ -970,6 +990,8 @@ h1,h2,h3,p{
         #tools .tools_r .theme {
           font-size: clamp(1.5rem, 4vw,5rem);     
           padding-bottom: 2.3vh;
+          letter-spacing: 0.1rem;
+          -webkit-text-stroke: 1px #8888;
         }
         #tools .tools_r .all_ex {
           height: 92%;
@@ -1255,7 +1277,6 @@ h1,h2,h3,p{
       }
       #projects .face_box .emoji {
         height: 107%;
-        width: 100%;
       }
       #projects .tools_l .tools_l_bottom {
         margin-top: 0.5%;
@@ -1307,11 +1328,70 @@ h1,h2,h3,p{
     @media (max-width: 430px){
       #projects .e_h2_1 {
         font-size: clamp(1rem, 3.4vw,2rem);
-        letter-spacing: 0.05rem;
+        letter-spacing: 0.05rem;    
+      }
+      #projects .tools_l {
+        padding-bottom: 2vh;
+      }
+      #projects .tools_l .tools_l_bottom {
+        border-right: 0px;
+      }
+      #projects .tools_l .titleMark {
+        width: 59%;
+        height: 100px;
+        line-height: 102px;
+      }
+      #projects .tools_l .tools_l_bottom .poject_btn {
+        width: 100%;
+      }
+      #projects .tools_r {
+        flex: 1;
+        display: flex;
+      }
+      #projects .tools_r .illus_box::after{
+        display: none;
+      }
+      #projects .contact_btn {
+        justify-content: center;
+        height: auto;
+        padding: 0px 7%;
+        flex-direction: column;
+      }
+      .contact_btn .btnMark {
+        width: 148%;
+        height: 45px;
+        line-height: 46px;
+        margin-bottom: .5vh;
+      }
+      #projects .face_box {
+        width: 58%;
+      }
+      #projects .text {
+        padding:0 7%;
+      }
+      #projects .face_box .emoji {
+        height: 79%;
+      }
+      #projects .eyebox-l,
+      #projects .eyebox-r{
+        width: 28px;
+        height: 33px;
+      }
+      #projects .eyebox-l{
+        left: 30%;
+      }
+      #projects  .eye::after {
+        width: 15px;
+        height: 15px;
+        right: 2px;
       }
     } 
 
-
+    @media (max-width: 393px){
+      #projects .face_box .emoji {
+        height: 80%;
+      }
+    }
 /* --------------5.list---------------- */  
     #list_box .list .title_2{
       display: flex;
@@ -1505,6 +1585,50 @@ h1,h2,h3,p{
       line-height: clamp(1.3rem, 3vw, 3.125rem);
     }
   }
+  @media (max-width: 430px){
+    #list_box .col_1 {
+      margin-bottom: -6.5%;
+      display: flex;
+      flex-direction: column;
+    }
+    #list_box .col_1 .detail {
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 2%;
+   }
+   #list_box .list .col_1 .detail .e_h3 {
+    align-items: flex-end;
+   }
+   #list_box .col_1 .list_cover {
+     width: 100%;
+   }
+   #list_box .detail h1 {
+    line-height: 2.2rem;
+   }
+   #list_box .detail h1:before {
+    top: 45%;
+   }
+   #list_box .detail h1:after {
+    height: 8px;
+    width: 8px;
+    top: 45%;
+    left: 109%;
+   }
+   #list_box .mb {
+    margin-bottom: 14.5%;
+   }
+   #list_box .col2_box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+   }
+   #list_box .col_2 .list_cover {
+    height: 22vh;
+   }
+    #list_box .col_2 {
+        padding-bottom: 6%;
+    }
+  }
 
 
 /* --------------6.bottom bar---------------- */  
@@ -1568,6 +1692,17 @@ h1,h2,h3,p{
    }
    #bottom_box .menu_btn a {
     width: 80%;
+   }
+  }
+  @media(max-width: 430px){
+    #bottom_box {
+    height: 15vh;
+   }
+    #bottom_box .menu_btn {
+      width: 54%;
+    }
+    #bottom_box .menu_btn a {
+      height: 36%;
    }
   }
 
