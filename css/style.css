@@ -125,7 +125,7 @@ h1,h2,h3,p{
     /* e_h1 */
     .e_h1{
         /*font-size: 3.125rem;*/
-        font-size: clamp(2.5rem, 3vw,3.125rem);
+        font-size: clamp(1.5rem, 4vw,3.125rem);
     }
     /* e_h2 */
     .e_h2{
@@ -149,7 +149,7 @@ h1,h2,h3,p{
     /* e_p */
     .e_p{
       /*font-size: 0.875rem;*/
-      font-size: clamp(0.75rem, 3vw,1rem);
+      font-size: clamp(0.75rem, 2vw,1rem);
       line-height: 150%;
       letter-spacing: 0.05rem;
     }
@@ -184,7 +184,7 @@ h1,h2,h3,p{
     }
 
     p{
-      font-size: clamp(0.8rem, 4vw,1rem);
+      font-size: clamp(0.8rem, 2vw,1rem);
       line-height: 1.8rem;
       letter-spacing: 0.15rem;
     }
