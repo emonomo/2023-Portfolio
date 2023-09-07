@@ -26,18 +26,27 @@
     font-size: clamp(4.5rem, 7vw, 6.5rem);
     letter-spacing: 5px;
   }
-@media (min-width: 375px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px){
   #text_box {
     width: 100%;
     height: 15vh;
     display: flex;
     align-items: center;
     overflow-x: hidden;
-    margin-top: 7vh;
+    margin-top: 6.8vh;
     border-bottom: 1px solid #333;
   }
 }
 @media (min-width: 375px) and (max-width: 767px){
+  #text_box {
+    width: 100%;
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    margin-top: 8vh;
+    border-bottom: 1px solid #333;
+  }
   .wrapper {
     display: flex;
     width: fit-content;
@@ -385,16 +394,23 @@
   }
 }
 @media (max-width:393px){
+  #container {
+    height: 370vh;
+  }
   #about .face_box .img_rotate {
-    top: 28%;
+    top: 27%;
   }
   .face_box .emoji {
-    height: 43%;
+    height: 47%;
   }
   .eye::after {
     width: 15px;
     height: 15px;
     right: 1.5px;
+  }
+  #about .intro_l .e_h2 {
+    padding-top:3vh;
+    padding-bottom: 6%;
   }
 }
 
@@ -607,7 +623,7 @@
 @media (max-width: 767px){
  .panel {
    padding: 2vh 3%;
-   height: calc(100vh - 90px);
+   height: calc(100vh - 100px);
    border: 4px solid #4FA1BB;
   }
   .panel_with_a_index {
@@ -617,6 +633,7 @@
   #container .title {
     padding-bottom: 4%;
     border-bottom: #333 0px solid;
+    width: 80%;
    }
    #container .panel article {
     display: flex;
@@ -643,6 +660,7 @@
   }
   #container {
     height: 378vh;
+    padding: 1.5% 0;
   }
   #container .panel .item span {
     display: none;
