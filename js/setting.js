@@ -26,7 +26,7 @@
 
 //index大字母 mouseover random color
         // Colors
-        const colors = ["#4FA1BB", "#9FE1D9", "#E6EFF0"];
+        const colors = ["#4FA1BB", "#9FE1D9", "#C8E3E5"];
 
         // The time it takes for the colors to disappear (in milliseconds)
         const timeout = 3000;
