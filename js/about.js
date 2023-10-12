@@ -88,6 +88,7 @@ $(document).mousemove(function(event) {
           start: () => panel.offsetHeight < window.innerHeight ? "top 90px" : "bottom bottom",
           pin: true,
           pinSpacing: false,
+    
           snap: {
             duration: 0.5
           }
@@ -104,16 +105,19 @@ $(document).mousemove(function(event) {
         ...settings,
       });
     });
+
+    const container = document.getElementById("container");
     ScrollTrigger.create({
       trigger: ".panel_with_a_index",
       start: "top top",
       endTrigger: "#container",
       end: "bottom 110%",
+      // markers:true,
       pin: true,
       pinSpacing: false,
       onUpdate: (self) => {
         if (self.isDragging) {
-          const containerRect = document.querySelector("#container").getBoundingClientRect();
+          const containerRect = container.getBoundingClientRect();
           const aIndexRect = document.querySelector(".a_index").getBoundingClientRect();
           const difference = aIndexRect.top - containerRect.top;
           gsap.set(".a_index", { y: difference });
@@ -121,6 +125,7 @@ $(document).mousemove(function(event) {
       }
     });
 
+    
     // ScrollTrigger.create({
     //   trigger: ".one",
     //   start: "top top",

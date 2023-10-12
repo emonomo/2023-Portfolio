@@ -440,11 +440,15 @@
 /* 設定底板 */
 
 #container {
-  /* height: 340vh; */
-  height: 378vh;
+  /*height: 378vh;*/
+  height: 545vh; 
   position: relative;
   overflow: hidden;
-  padding: 3% 0 ;  
+  padding: 50% 0 ;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
   .panel{
@@ -567,6 +571,10 @@
   width: 100px;
 }
 @media (min-width: 1025px) and (max-width: 1440px){
+  #container {
+  height: 550vh;
+  padding: 53% 0;
+}
   #container .title {
     display: inline-block;
     padding-bottom: 1%;
@@ -590,8 +598,8 @@
 }
 @media (min-width: 375px) and (max-width: 1024px){
   .panel {
-    padding: 5vh 3%;
-    height: calc(95vh - 100px);
+    padding: 3vh 3%;
+    height: calc(88vh - 100px);
    }
    .panel .e_h3{
     font-size: clamp(0.9rem, 2.5vw,1.58rem);
@@ -605,8 +613,8 @@
   }
 
   #container {
-    /* height: 340vh; */
-    height: 365vh;
+    height: 585vh;
+    padding: 70% 0;
   }
 }
 
@@ -614,9 +622,8 @@
   #about article {
     margin-top: 1vh;
   }
-  #container {
-    height: 378vh;
-  }
+
+
   #about .face_box .img_rotate svg {
     width: 100%;
  }
@@ -635,8 +642,13 @@
   }
 
   .panel {
-    height: calc(100vh - 100px);
-   }  
+    padding: 3vh 3%;
+    height: calc(91vh - 100px);
+   }
+   #container {
+    height: 580vh;
+    padding: 80% 0;
+  }
    .panel_with_a_index {
     height: 100vh;
   }
@@ -683,6 +695,10 @@
   .panel {
     border-radius: 15px;
   }
+  .panel {
+    padding: 3vh 3%;
+    height: calc(82vh - 100px);
+   }
   .panel_with_a_index {
     height: 100vh;
     box-shadow: none;
@@ -694,8 +710,8 @@
   }
   #container {
     /* height: 375vh; */
-    height: 375vh;
-    padding: 1.5% 0;
+    height: 540vh;
+    padding: 80% 0;
   }
   #container .panel .item span {
     display: none;
@@ -710,7 +726,7 @@
 @media (max-width: 430px) {
   #container {
     height: 280vh;
-    padding: 11% 0;
+    padding: 12% 0;
   }
   .panel{
     box-shadow: 0px  0px 0 12px #fff,
@@ -723,6 +739,12 @@
     height: 100vh;
     box-shadow: none;
   }
+
+
+  .panel {
+    padding: 2vh 3%;
+    height: calc(100vh - 100px);
+   }
 }
 @media (max-width:375px){
   #container {
