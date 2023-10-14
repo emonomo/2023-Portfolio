@@ -572,8 +572,8 @@
 }
 @media (min-width: 1025px) and (max-width: 1440px){
   #container {
-  height: 550vh;
-  padding: 53% 0;
+  height: 560vh;
+  padding: 55% 0;
 }
   #container .title {
     display: inline-block;
