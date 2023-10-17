@@ -186,6 +186,11 @@ width: 82%;
 .zan_v{
   width: 87.5%;
 }
+
+.img-gif{
+  width: 87%;
+  margin-bottom: 2.5vh;
+}
 @media (min-width: 375px) and (max-width: 1439px){
   #content {
     padding: 5vh 5% 7vh 5%;
